@@ -5,8 +5,6 @@
 #include "AnagramController.h"
 
 DynamicVector<string> AnagramController::anagramsForWord(string word) {
-  MapHash<string, string> map = MapHash<string, string>();
-
   for (int i = 0; i<repo->getAll().getSize(); i++){
     string key = repo->getAll().elementAtIndex(i);
     map.addValueAndKey(key, sortWord(key));
@@ -14,7 +12,7 @@ DynamicVector<string> AnagramController::anagramsForWord(string word) {
 
   word = sortWord(word);
   DynamicVector<string> elements = DynamicVector<string>();
-  Node<string, string> *first = map.getTable(word);
+  Node<string, string> *first = map.getNodeForValue(word);
   while (first != NULL && first->getData()->getValue() == word) {
     elements.add(first->getData()->getKey());
     first = first->getNext();

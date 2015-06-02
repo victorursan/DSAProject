@@ -12,7 +12,6 @@ class Pair {
   Key key;
   Value value;
 public:
-  // Value sortValue(Value v) {return v;};
   Pair(Key key, Value value) {this->key = key; this->value = value;};
   Key getKey() {return key;};
   Value getValue() {return value;};

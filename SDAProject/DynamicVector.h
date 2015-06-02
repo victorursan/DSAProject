@@ -11,114 +11,126 @@
 template<typename TElement>
 class DynamicVector {
 private:
-    TElement *elements;
-    int size = 0;
-    int capacity = 10;
+  TElement *elements;
+  int size = 0;
+  int capacity = 10;
 
-    void resize();
+  void resize();
 public:
-    DynamicVector();
+  DynamicVector();
   DynamicVector(TElement t) {};
 
-    ~DynamicVector();
+  ~DynamicVector();
 
-    void add(TElement e);
+  void add(TElement e);
 
-    void removeAtIndex(int index);
+  void removeAtIndex(int index);
 
-    void updateElement(int index, TElement element);
+  void removeElement(TElement e);
 
-    TElement elementAtIndex(int index);
+  void updateElement(int index, TElement element);
 
-    int indexForElement(TElement e);
+  TElement elementAtIndex(int index);
 
-    int getSize();
+  int indexForElement(TElement e);
 
-    bool isEmpty();
+  int getSize();
 
-    bool doesContainElement(TElement e);
+  bool isEmpty();
+
+  bool doesContainElement(TElement e);
 };
 
 template<typename TElement>
 DynamicVector<TElement>::DynamicVector() {
-    this->elements = new TElement[capacity]();
+  this->elements = new TElement[capacity]();
 }
 
 template<typename TElement>
 DynamicVector<TElement>::~DynamicVector() {
-   // delete[] elements;
+  // delete[] elements;
 }
 
 template<typename TElement>
 void DynamicVector<TElement>::add(TElement e) {
-    if (size >= capacity - 2) {
-        resize();
-    }
-    size++;
-    this->elements[size - 1] = e;
+  if (size >= capacity - 2) {
+    resize();
+  }
+  size++;
+  this->elements[size - 1] = e;
 }
 
 template<typename TElement>
 void DynamicVector<TElement>::removeAtIndex(int index) {
-    for (int i = index; i < size; i++) {
-        elements[i] = elements[i + 1];
+  for (int i = index; i < size; i++) {
+    elements[i] = elements[i + 1];
+  }
+  size--;
+}
+
+template<typename TElement>
+void DynamicVector<TElement>::removeElement(TElement e) {
+  for (int i = 0; i < size; i++) {
+    if(elements[i] == e) {
+      removeAtIndex(i);
+      break;
     }
-    size--;
+  }
 }
 
 template<typename TElement>
 TElement DynamicVector<TElement>::elementAtIndex(int index) {
-    return elements[index];
+  return elements[index];
 }
 
 template<typename TElement>
 int DynamicVector<TElement>::getSize() {
-    return size;
+  return size;
 }
 
 template<typename TElement>
 bool DynamicVector<TElement>::isEmpty() {
-    return size == 0;
+  return size == 0;
 }
 
 template<typename TElement>
 bool DynamicVector<TElement>::doesContainElement(TElement e) {
-    for (int i = 0; i < size; i++) {
-        if (elements[i] == e) {
-            return 1;
-        }
+  for (int i = 0; i < size; i++) {
+    if (elements[i] == e) {
+      return 1;
     }
-    return 0;
+  }
+  return 0;
 }
 
 template<typename TElement>
 void DynamicVector<TElement>::resize() {
-    int i = 0;
-    capacity += 10;
-    TElement *tmp = elements;
-    elements = new TElement[capacity]();
-    for (i = 0; i < size; i++) {
-        elements[i] = tmp[i];
-    }
-    delete[] tmp;
+  int i = 0;
+  capacity += 10;
+  TElement *tmp = elements;
+  elements = new TElement[capacity]();
+  for (i = 0; i < size; i++) {
+    elements[i] = tmp[i];
+  }
+  delete[] tmp;
 }
 
 template<typename TElement>
 int DynamicVector<TElement>::indexForElement(TElement e) {
-    for (int i = 0; i < size; i++) {
-        if (elements[i] == e) {
-            return i;
-        }
+  for (int i = 0; i < size; i++) {
+    if (elements[i] == e) {
+      return i;
     }
-    return -1;
+  }
+  return -1;
 }
 
 template<typename TElement>
 void DynamicVector<TElement>::updateElement(int index, TElement element) {
-    if (index < size) {
-        elements[index] = element;
-    } else {
-        //TO DO:
-    }
+  if (index < size) {
+    elements[index] = element;
+  } else {
+    //TO DO:
+  }
 }
 #endif //DSAPROJECT_DYNAMICVECTOR_H

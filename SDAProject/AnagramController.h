@@ -12,7 +12,7 @@
 using namespace std;
 
 class AnagramController {
-  MapHash<string , int> map;
+  MapHash<string, string> map = MapHash<string, string>();
   AbstractRepository<string> *repo;
 
 public:
