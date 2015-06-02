@@ -20,6 +20,5 @@ public:
   DynamicVector<string> anagramsForWord(string word);
   string sortWord(string word);
 };
-void print(string word, DynamicVector<string> );
 
 #endif //DSAPROJECT_ANAGRAMCONTROLLER_H

@@ -12,7 +12,7 @@
 #define TABLE_SIZE 122
 
 template <typename Key, typename Value>
-class MapHash: Map<Key, Value> {
+class MapHash: public Map<Key, Value> {
   SortedList<Key, Value> lst[TABLE_SIZE];
 
   DynamicVector<Key> keys;

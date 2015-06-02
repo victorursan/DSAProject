@@ -9,7 +9,7 @@
 #include "Map.h"
 
 template<typename Key, typename Value>
-class MapDVector: Map<Key, Value> {
+class MapDVector: public Map<Key, Value> {
 private:
     DynamicVector<Key> keys;
     DynamicVector<Value> values;
