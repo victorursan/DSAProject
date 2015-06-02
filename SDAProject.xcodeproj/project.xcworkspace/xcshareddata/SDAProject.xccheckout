@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D2C5349F-E622-4970-B4BF-B10F7B450462</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SDAProject</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A387E6CC8C67509B7C88A36EFD7B41ADEE4FEF2B</key>
 		<string>github.com:victorursan/DSAProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SDAProject.xcodeproj</string>
+	<string>SDAProject.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A387E6CC8C67509B7C88A36EFD7B41ADEE4FEF2B</key>

@@ -78,11 +78,6 @@ void SortedList<Key, Value>::removePair(Pair<Key, Value> *data) {
 
 template <typename Key, typename Value>
 void SortedList<Key, Value>::addPair(Pair<Key, Value> *data) {
-    length++;
-  if (head == NULL) {
-
-  }
-
   length++;
   if (head == NULL) {
     head = new Node<Key, Value>();
@@ -92,16 +87,15 @@ void SortedList<Key, Value>::addPair(Pair<Key, Value> *data) {
   }
   Node<Key, Value> *tmp = head;
   if (tmp->getData()->getValue() >= data->getValue()) {
+    Node<Key, Value> *newNode = new Node<Key, Value>();
+    newNode->setData(head->getData());
+    newNode->setNext(head->getNext());
     head->setData(data);
-    head->setNext(tmp);
+    head->setNext(newNode);
     return;
   }
   while(tmp->getNext() != NULL) {
-//    cout<<tmp->getData()->getValue()<<endl;
-//    cout<<data->getValue()<<endl;
-//    cout<<tmp->getNext()->getData()->getValue()<<endl;
     if(tmp->getData()->getValue() <= data->getValue()) {
-//       tmp->getNext()->getData()->getValue() >= data->getValue()) {
       Node<Key, Value> *aux = tmp->getNext();
       Node<Key, Value> *newNode = new Node<Key, Value>();
       newNode->setData(data);
@@ -194,7 +188,6 @@ template <typename Key, typename Value>
 Node<Key, Value>* SortedList<Key, Value>::findFirstNode(Value value){
   Node<Key, Value> *node = head;
   while(node != NULL){
-    cout<<node->getData()->getValue()<<endl;
     if(node->getData()->getValue() == value){
       return node;
     }

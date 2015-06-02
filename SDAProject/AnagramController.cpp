@@ -15,7 +15,6 @@ DynamicVector<string> AnagramController::anagramsForWord(string word) {
   word = sortWord(word);
   DynamicVector<string> elements = DynamicVector<string>();
   Node<string, string> *first = map.getTable(word);
-  cout<<"am iesit"<<endl;
   while (first != NULL && first->getData()->getValue() == word) {
     elements.add(first->getData()->getKey());
     first = first->getNext();
