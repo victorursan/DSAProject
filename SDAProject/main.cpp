@@ -12,9 +12,9 @@ using namespace std;
 int main() {
   test_all();
   test_ssll();
-//  FileRepository *repo = new FileRepository();
-//  AnagramController *ctrl = new AnagramController(repo);
-//  Console *console = new Console(ctrl);
-//  console->run();
+  FileRepository *repo = new FileRepository();
+  AnagramController *ctrl = new AnagramController(repo);
+  Console *console = new Console(ctrl);
+  console->run();
   return 0;
 }

@@ -12,12 +12,13 @@
 using namespace std;
 
 class AnagramController {
-    MapHash<string , int> map;
-    AbstractRepository<string> *repo;
+  MapHash<string , int> map;
+  AbstractRepository<string> *repo;
 
 public:
-    AnagramController(AbstractRepository<string> *repo) {this->repo = repo;};
-    DynamicVector<string> anagramsForWord(string word);
+  AnagramController(AbstractRepository<string> *repo) {this->repo = repo;};
+  DynamicVector<string> anagramsForWord(string word);
+  string sortWord(string word);
 };
 void print(string word, DynamicVector<string> );
 

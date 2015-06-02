@@ -5,25 +5,28 @@
 #include "AnagramController.h"
 
 DynamicVector<string> AnagramController::anagramsForWord(string word) {
-  DynamicVector<string> r = repo->getAll();
-  for (int i = 0; i< r.getSize(); i++) {
-    map.addValueAndKey(r.elementAtIndex(i) , i);
-  }
-  long int has  = map.has_function(word);
-  DynamicVector<string> values = map.keysAndValuesForhas(has);
-  print(word, values);
-  return DynamicVector<string>();
+  MapHash<string, string> map = MapHash<string, string>();
 
-}
-void print(string word, DynamicVector<string> values) {
-  DynamicVector<string> new_string;
-  string s = word;
-  cout<<endl;
-  sort(s.begin(), s.end());
-  while(next_permutation(s.begin(), s.end())) {
-    if (values.doesContainElement(s)) {
-      cout << s << endl;
-    }
+  for (int i = 0; i<repo->getAll().getSize(); i++){
+    string key = repo->getAll().elementAtIndex(i);
+    map.addValueAndKey(key, sortWord(key));
   }
+
+  word = sortWord(word);
+  DynamicVector<string> elements = DynamicVector<string>();
+  Node<string, string> *first = map.getTable(word);
+  cout<<"am iesit"<<endl;
+  while (first != NULL && first->getData()->getValue() == word) {
+    elements.add(first->getData()->getKey());
+    first = first->getNext();
+  }
+  return elements;
 }
+
+string AnagramController::sortWord(string word){
+  string smth = word;
+  sort(smth.begin(), smth.end());
+  return smth;
+}
+
 

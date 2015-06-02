@@ -46,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		5732F4AE1B1DD36200E747D8 /* testSSLL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testSSLL.h; sourceTree = "<group>"; };
+		5732F4AF1B1DF60600E747D8 /* something */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = something; sourceTree = "<group>"; };
 		57B0C13B1B1CBDC000B11B2E /* SDAProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDAProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B0C14C1B1D7FE300B11B2E /* AnagramController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnagramController.cpp; sourceTree = "<group>"; };
 		57B0C14D1B1D7FE300B11B2E /* AnagramController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnagramController.h; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		57B0C15A1B1D803200B11B2E /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		57B0C15C1B1D803A00B11B2E /* words */ = {isa = PBXFileReference; lastKnownFileType = text; path = words; sourceTree = "<group>"; };
 		57B0C15E1B1D813200B11B2E /* testMapDVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testMapDVector.h; sourceTree = "<group>"; };
-		57B0C1671B1DD18E00B11B2E /* Ghita.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ghita.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +102,7 @@
 				57B0C15A1B1D803200B11B2E /* main.cpp */,
 				57B0C1621B1D817400B11B2E /* Console */,
 				57B0C15C1B1D803A00B11B2E /* words */,
+				5732F4AF1B1DF60600E747D8 /* something */,
 			);
 			path = SDAProject;
 			sourceTree = "<group>";
@@ -132,7 +133,6 @@
 				57B0C1511B1D7FEC00B11B2E /* Map.h */,
 				57B0C1521B1D7FEC00B11B2E /* MapDVector.h */,
 				57B0C1531B1D7FEC00B11B2E /* MapHash.h */,
-				57B0C1671B1DD18E00B11B2E /* Ghita.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";

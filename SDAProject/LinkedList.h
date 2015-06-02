@@ -12,19 +12,18 @@ class Pair {
   Key key;
   Value value;
 public:
-  Value sortValue(Value v) {return v;};
+  // Value sortValue(Value v) {return v;};
   Pair(Key key, Value value) {this->key = key; this->value = value;};
   Key getKey() {return key;};
   Value getValue() {return value;};
   void setKey(Key key) {this->key = key;};
   void setValue(Value value) {
-    this->value = sortValue(value);
+    this->value = value;
   };
 };
 
 template <typename Key, typename Value>
 class Node {
-  //public:
   Pair<Key, Value> *pair;
   Node<Key, Value> *next;
 public:
@@ -37,7 +36,6 @@ public:
 
 template <typename Key, typename Value>
 class SortedList {
-  //public:
   Node<Key, Value> *head;
   int length;
 
@@ -51,6 +49,7 @@ public:
   void updateValueForKey(Key key, Value value);
   bool doesKeyExist(Key key);
   bool doesValueExist(Value value);
+  Node<Key, Value>* findFirstNode(Value value);
 };
 
 template <typename Key, typename Value>
@@ -79,6 +78,11 @@ void SortedList<Key, Value>::removePair(Pair<Key, Value> *data) {
 
 template <typename Key, typename Value>
 void SortedList<Key, Value>::addPair(Pair<Key, Value> *data) {
+    length++;
+  if (head == NULL) {
+
+  }
+
   length++;
   if (head == NULL) {
     head = new Node<Key, Value>();
@@ -93,7 +97,11 @@ void SortedList<Key, Value>::addPair(Pair<Key, Value> *data) {
     return;
   }
   while(tmp->getNext() != NULL) {
-    if(tmp->getData()->getValue() <= data->getValue() && tmp->getNext()->getData()->getValue() > data->getValue()) {
+//    cout<<tmp->getData()->getValue()<<endl;
+//    cout<<data->getValue()<<endl;
+//    cout<<tmp->getNext()->getData()->getValue()<<endl;
+    if(tmp->getData()->getValue() <= data->getValue()) {
+//       tmp->getNext()->getData()->getValue() >= data->getValue()) {
       Node<Key, Value> *aux = tmp->getNext();
       Node<Key, Value> *newNode = new Node<Key, Value>();
       newNode->setData(data);
@@ -107,6 +115,7 @@ void SortedList<Key, Value>::addPair(Pair<Key, Value> *data) {
   newNode->setData(data);
   newNode->setNext(NULL);
   tmp->setNext(newNode);
+  return;
 }
 
 template <typename Key, typename Value>
@@ -179,6 +188,19 @@ bool SortedList<Key, Value>::doesValueExist(Value value) {
     tmp = tmp->getNext();
   }
   return 0;
+}
+
+template <typename Key, typename Value>
+Node<Key, Value>* SortedList<Key, Value>::findFirstNode(Value value){
+  Node<Key, Value> *node = head;
+  while(node != NULL){
+    cout<<node->getData()->getValue()<<endl;
+    if(node->getData()->getValue() == value){
+      return node;
+    }
+    node = node->getNext();
+  }
+  return node;
 }
 
 
