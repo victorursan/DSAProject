@@ -1,16 +1,17 @@
 //
-// Created by Victor Ursan on 6/1/15.
+//  testMapHash.h
+//  SDAProject
+//
+//  Created by Victor Ursan on 6/3/15.
+//  Copyright (c) 2015 Victor Ursan. All rights reserved.
 //
 
-#ifndef DSAPROJECT_TESTMAPDVECTOR_H
-#define DSAPROJECT_TESTMAPDVECTOR_H
-
-#include <assert.h>
-#include "MapDVector.h"
+#ifndef SDAProject_testMapHash_h
+#define SDAProject_testMapHash_h
 
 using namespace std;
 
-void test_addValueAndKey() {
+void test_addValueAndKey_mapHash() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -20,7 +21,7 @@ void test_addValueAndKey() {
 }
 //void addValueAndKey(Key key, Value value);
 
-void test_updateValueForKey() {
+void test_updateValueForKey_mapHash() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -31,7 +32,7 @@ void test_updateValueForKey() {
 }
 //void updateValueForKey(Key key, Value value);
 
-void test_UpdateKeyForValue() {
+void test_UpdateKeyForValue_mapHash() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -42,7 +43,7 @@ void test_UpdateKeyForValue() {
 }
 //void updateKeyForValue(Value value, Key key);
 
-void test_valueForKey() {
+void test_valueForKey_mapHash() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -52,7 +53,7 @@ void test_valueForKey() {
 }
 //Value valueForKey(Key key);
 
-void test_keyForValue() {
+void test_keyForValue_mapHash() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -62,7 +63,7 @@ void test_keyForValue() {
 }
 //Key keyForValue(Value value);
 
-void test_removeKey() {
+void test_removeKey_mapHash() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -73,7 +74,7 @@ void test_removeKey() {
 }
 //void removeKey(Key key);
 
-void test_removeValue() {
+void test_removeValue_mapHash() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -84,7 +85,7 @@ void test_removeValue() {
 }
 //void removeValue(Value value);
 
-void test_doesKeyExist() {
+void test_doesKeyExist_mapHash() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -94,7 +95,7 @@ void test_doesKeyExist() {
 }
 //bool doesKeyExist(Key key);
 
-void test_doesValueExist() {
+void test_doesValueExist_mapHash() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -104,7 +105,7 @@ void test_doesValueExist() {
 }
 //bool doesValueExist(Value value);
 
-void test_getKeys() {
+void test_getKeys_mapHash() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -114,7 +115,7 @@ void test_getKeys() {
 }
 //DynamicVector<Key> getKeys();
 
-void test_getValues() {
+void test_getValues_mapHash() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -124,18 +125,18 @@ void test_getValues() {
 }
 //DynamicVector<Value> getValues();
 
-void test_all_mapDVector() {
-  test_addValueAndKey();
-  test_doesKeyExist();
-  test_doesValueExist();
-  test_getKeys();
-  test_getValues();
-  test_removeKey();
-  test_removeValue();
-  test_updateValueForKey();
-  test_UpdateKeyForValue();
-  test_keyForValue();
-  test_valueForKey();
+void test_all_mapHash() {
+  test_addValueAndKey_mapHash();
+  test_doesKeyExist_mapHash();
+  test_doesValueExist_mapHash();
+  test_getKeys_mapHash();
+  test_getValues_mapHash();
+  test_removeKey_mapHash();
+  test_removeValue_mapHash();
+  test_updateValueForKey_mapHash();
+  test_UpdateKeyForValue_mapHash();
+  test_keyForValue_mapHash();
+  test_valueForKey_mapHash();
 }
 
-#endif //DSAPROJECT_TESTMAPDVECTOR_H
+#endif

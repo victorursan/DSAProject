@@ -63,6 +63,7 @@
 		57B0C15A1B1D803200B11B2E /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		57B0C15C1B1D803A00B11B2E /* words */ = {isa = PBXFileReference; lastKnownFileType = text; path = words; sourceTree = "<group>"; };
 		57B0C15E1B1D813200B11B2E /* testMapDVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testMapDVector.h; sourceTree = "<group>"; };
+		57D84D6B1B1E529E00562500 /* testMapHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testMapHash.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +113,7 @@
 			children = (
 				57B0C15E1B1D813200B11B2E /* testMapDVector.h */,
 				5732F4AE1B1DD36200E747D8 /* testSSLL.h */,
+				57D84D6B1B1E529E00562500 /* testMapHash.h */,
 			);
 			name = test;
 			sourceTree = "<group>";
