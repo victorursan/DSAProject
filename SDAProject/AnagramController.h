@@ -5,13 +5,13 @@
 #ifndef DSAPROJECT_ANAGRAMCONTROLLER_H
 #define DSAPROJECT_ANAGRAMCONTROLLER_H
 
-
+#include "Anagram.h"
 #include "MapHash.h"
 #include "AbstractRepositoy.h"
 
 using namespace std;
 
-class AnagramController {
+class AnagramController : public Anagram {
   MapHash<string, string> map = MapHash<string, string>();
   AbstractRepository<string> *repo;
 

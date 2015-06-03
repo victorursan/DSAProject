@@ -11,12 +11,14 @@
 
 #include <stdio.h>
 #include "MapHash.h"
+#include "MapDVector.h"
+#include "Anagram.h"
 #include "AbstractRepositoy.h"
 
 using namespace std;
 
-class SecondAnagramController {
-  Map<string, string> *map = new MapHash<string, string>();
+class SecondAnagramController : public Anagram {
+  Map<string, string> *map = new MapDVector<string, string>();
   AbstractRepository<string> *repo;
 
 public:

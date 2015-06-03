@@ -15,12 +15,14 @@ DynamicVector<string> SecondAnagramController::anagramsForWord(string word) {
   }
 
   word = sortWord(word);
+
   DynamicVector<string> elements = DynamicVector<string>();
-//  Node<string, string> *first = map->getNodeForValue(word);
-//  while (first != NULL && first->getData()->getValue() == word) {
-//    elements.add(first->getData()->getKey());
-//    first = first->getNext();
-//  }
+  DynamicVector<string> keys = map->getKeys();
+  for (int i = 0; i < keys.getSize(); i++) {
+    if (map->valueForKey(keys.elementAtIndex(i)) == sortWord(word)) {
+      elements.add(map->valueForKey(keys.elementAtIndex(i)));
+    }
+  }
   return elements;
 }
 

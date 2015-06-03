@@ -9,10 +9,10 @@
 #include "AnagramController.h"
 
 class Console {
-    AnagramController *ctrl;
+    Anagram *ctrl;
 
 public:
-    Console(AnagramController* ctrl) {this->ctrl = ctrl;};
+    Console(Anagram* ctrl) {this->ctrl = ctrl;};
     ~Console();
 
     void run();

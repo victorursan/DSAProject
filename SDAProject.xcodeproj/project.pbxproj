@@ -67,6 +67,7 @@
 		57D84D6B1B1E529E00562500 /* testMapHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testMapHash.h; sourceTree = "<group>"; };
 		57D84D6C1B1E58BE00562500 /* SecondAnagramController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SecondAnagramController.cpp; sourceTree = "<group>"; };
 		57D84D6D1B1E58BE00562500 /* SecondAnagramController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondAnagramController.h; sourceTree = "<group>"; };
+		57D84D6F1B1EF7EF00562500 /* Anagram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Anagram.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +129,7 @@
 				57B0C14D1B1D7FE300B11B2E /* AnagramController.h */,
 				57D84D6C1B1E58BE00562500 /* SecondAnagramController.cpp */,
 				57D84D6D1B1E58BE00562500 /* SecondAnagramController.h */,
+				57D84D6F1B1EF7EF00562500 /* Anagram.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
