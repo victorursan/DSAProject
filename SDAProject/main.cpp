@@ -17,9 +17,10 @@ int main() {
   test_all_mapHash();
   test_ssll();
   test_DynamicVector();
-  FileRepository *repo = new FileRepository();
-//  AnagramController *ctrl = new AnagramController(repo);
-  SecondAnagramController *ctrl = new SecondAnagramController(repo);
+  char *filename = (char*)"words";
+  FileRepository *repo = new FileRepository(filename);
+  AnagramController *ctrl = new AnagramController(repo);
+//  SecondAnagramController *ctrl = new SecondAnagramController(repo);
   Console *console = new Console(ctrl);
   console->run();
   return 0;

@@ -6,30 +6,35 @@
 #define DSAPROJECT_FILEREPOSITORY_H
 
 #include <fstream>
+#include <string.h>
 #include "Repository.h"
 
 using namespace std;
 
 class FileRepository: public Repository<string>{
-public:
-    FileRepository() : Repository<string>() {
-        loadEntities();
-    }
 private:
-    void loadEntities();
+  char *filename;
+  void loadEntities();
+
+public:
+  FileRepository(char *filename = (char*)"words") : Repository<string>() {
+    this->filename = (char *) malloc(sizeof(char) * strlen(filename));
+    strcpy(this->filename, filename);
+    loadEntities();
+  }
 };
 
 void FileRepository::loadEntities() {
-    ifstream fin("words");
-    if (!fin.is_open()) {
-        cout<<"error"<<endl;
-    }
-    while (fin.good()) {
-        string p;
-        fin >> p;
-        Repository<string>::save(p);
-    }
-    fin.close();
+  ifstream fin(filename);
+  if (!fin.is_open()) {
+    cout<<"error"<<endl;
+  }
+  while (fin.good()) {
+    string p;
+    fin >> p;
+    Repository<string>::save(p);
+  }
+  fin.close();
 }
 
 

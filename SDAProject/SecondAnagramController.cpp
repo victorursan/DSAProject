@@ -27,6 +27,6 @@ DynamicVector<string> SecondAnagramController::anagramsForWord(string word) {
 }
 
 string SecondAnagramController::sortWord(string word){
-  sort(word.begin(), word.end());
+  sortChar(&word[0]);
   return word;
 }

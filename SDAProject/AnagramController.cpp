@@ -21,8 +21,6 @@ DynamicVector<string> AnagramController::anagramsForWord(string word) {
 }
 
 string AnagramController::sortWord(string word){
-  sort(word.begin(), word.end());
+  sortChar(&word[0]);
   return word;
 }
-
-

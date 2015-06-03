@@ -14,11 +14,9 @@ using namespace std;
 class AnagramController : public Anagram {
   MapHash<string, string> map = MapHash<string, string>();
   AbstractRepository<string> *repo;
-
 public:
   AnagramController(AbstractRepository<string> *repo) {this->repo = repo;};
   DynamicVector<string> anagramsForWord(string word);
   string sortWord(string word);
 };
-
 #endif //DSAPROJECT_ANAGRAMCONTROLLER_H
