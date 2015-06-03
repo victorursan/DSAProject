@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void test_addValueAndKey() {
+void test_addValueAndKey_mapDVector() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -20,7 +20,7 @@ void test_addValueAndKey() {
 }
 //void addValueAndKey(Key key, Value value);
 
-void test_updateValueForKey() {
+void test_updateValueForKey_mapDVector() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -31,7 +31,7 @@ void test_updateValueForKey() {
 }
 //void updateValueForKey(Key key, Value value);
 
-void test_UpdateKeyForValue() {
+void test_UpdateKeyForValue_mapDVector() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -42,7 +42,7 @@ void test_UpdateKeyForValue() {
 }
 //void updateKeyForValue(Value value, Key key);
 
-void test_valueForKey() {
+void test_valueForKey_mapDVector() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -52,7 +52,7 @@ void test_valueForKey() {
 }
 //Value valueForKey(Key key);
 
-void test_keyForValue() {
+void test_keyForValue_mapDVector() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -62,7 +62,7 @@ void test_keyForValue() {
 }
 //Key keyForValue(Value value);
 
-void test_removeKey() {
+void test_removeKey_mapDVector() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -73,7 +73,7 @@ void test_removeKey() {
 }
 //void removeKey(Key key);
 
-void test_removeValue() {
+void test_removeValue_mapDVector() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -84,7 +84,7 @@ void test_removeValue() {
 }
 //void removeValue(Value value);
 
-void test_doesKeyExist() {
+void test_doesKeyExist_mapDVector() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -94,7 +94,7 @@ void test_doesKeyExist() {
 }
 //bool doesKeyExist(Key key);
 
-void test_doesValueExist() {
+void test_doesValueExist_mapDVector() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -104,7 +104,7 @@ void test_doesValueExist() {
 }
 //bool doesValueExist(Value value);
 
-void test_getKeys() {
+void test_getKeys_mapDVector() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -114,7 +114,7 @@ void test_getKeys() {
 }
 //DynamicVector<Key> getKeys();
 
-void test_getValues() {
+void test_getValues_mapDVector() {
   MapDVector<string, string> map = MapDVector<string, string> ();
   map.addValueAndKey("1", "ana");
   map.addValueAndKey("2", "una");
@@ -125,17 +125,17 @@ void test_getValues() {
 //DynamicVector<Value> getValues();
 
 void test_all_mapDVector() {
-  test_addValueAndKey();
-  test_doesKeyExist();
-  test_doesValueExist();
-  test_getKeys();
-  test_getValues();
-  test_removeKey();
-  test_removeValue();
-  test_updateValueForKey();
-  test_UpdateKeyForValue();
-  test_keyForValue();
-  test_valueForKey();
+  test_addValueAndKey_mapDVector();
+  test_doesKeyExist_mapDVector();
+  test_doesValueExist_mapDVector();
+  test_getKeys_mapDVector();
+  test_getValues_mapDVector();
+  test_removeKey_mapDVector();
+  test_removeValue_mapDVector();
+  test_updateValueForKey_mapDVector();
+  test_UpdateKeyForValue_mapDVector();
+  test_keyForValue_mapDVector();
+  test_valueForKey_mapDVector();
 }
 
 #endif //DSAPROJECT_TESTMAPDVECTOR_H

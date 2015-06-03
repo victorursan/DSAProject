@@ -9,10 +9,11 @@
 using namespace std;
 
 Console::~Console() {
-
+  // delete any pointers
 };
 
 void Console::run() {
+  // run the program
   string word;
   cout<<"Word: "<<endl;
   cin>>word;

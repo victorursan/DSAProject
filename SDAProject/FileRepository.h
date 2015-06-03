@@ -18,6 +18,7 @@ private:
 
 public:
   FileRepository(char *filename = (char*)"words") : Repository<string>() {
+    //open the file wit the given name and load it
     this->filename = (char *) malloc(sizeof(char) * strlen(filename));
     strcpy(this->filename, filename);
     loadEntities();
@@ -25,6 +26,7 @@ public:
 };
 
 void FileRepository::loadEntities() {
+  // load all the words in a DVector
   ifstream fin(filename);
   if (!fin.is_open()) {
     cout<<"error"<<endl;

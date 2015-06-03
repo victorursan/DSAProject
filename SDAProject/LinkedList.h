@@ -9,6 +9,7 @@ using namespace std;
 
 template <typename Key, typename Value>
 class Pair {
+  //a pair ok Key, Value for the Map
   Key key;
   Value value;
 public:
@@ -23,6 +24,7 @@ public:
 
 template <typename Key, typename Value>
 class Node {
+  // a node for the Single lnked list with a pair(key, value)
   Pair<Key, Value> *pair;
   Node<Key, Value> *next;
 public:
@@ -53,6 +55,7 @@ public:
 
 template <typename Key, typename Value>
 void SortedList<Key, Value>::removePair(Pair<Key, Value> *data) {
+  //remove a pair(key, value) from the list
   if(head == NULL) {
     return;
   }
@@ -77,6 +80,7 @@ void SortedList<Key, Value>::removePair(Pair<Key, Value> *data) {
 
 template <typename Key, typename Value>
 void SortedList<Key, Value>::addPair(Pair<Key, Value> *data) {
+  //add a pair to the list (sorted)
   length++;
   if (head == NULL) {
     head = new Node<Key, Value>();
@@ -113,6 +117,7 @@ void SortedList<Key, Value>::addPair(Pair<Key, Value> *data) {
 
 template <typename Key, typename Value>
 Value SortedList<Key, Value>::findValueForKey(Key key) {
+  //find the value for a specified key in the list
   Node<Key, Value> *tmp = head;
   while (head != NULL) {
     if (tmp->getData()->getKey() == key) {
@@ -125,6 +130,7 @@ Value SortedList<Key, Value>::findValueForKey(Key key) {
 
 template <typename Key, typename Value>
 Key SortedList<Key, Value>::findKeyForValue(Value value) {
+  //find the key for a specified value in the list
   Node<Key, Value> *tmp = head;
   while (head != NULL) {
     if (tmp->getData()->getValue() == value) {
@@ -137,6 +143,7 @@ Key SortedList<Key, Value>::findKeyForValue(Value value) {
 
 template <typename Key, typename Value>
 void SortedList<Key, Value>::updateKeyForValue(Value value, Key key) {
+  //update the key for a specified value
   Node<Key, Value> *tmp = head;
   while (head != NULL) {
     if (tmp->getData()->getValue() == value) {
@@ -149,6 +156,7 @@ void SortedList<Key, Value>::updateKeyForValue(Value value, Key key) {
 
 template <typename Key, typename Value>
 void SortedList<Key, Value>::updateValueForKey(Key key, Value value) {
+  //update the value for a specified key
   Node<Key, Value> *tmp = head;
   while (head != NULL) {
     if (tmp->getData()->getKey() == key) {
@@ -161,6 +169,7 @@ void SortedList<Key, Value>::updateValueForKey(Key key, Value value) {
 
 template <typename Key, typename Value>
 bool SortedList<Key, Value>::doesKeyExist(Key key) {
+  //check if a specified key exists in the list
   Node<Key, Value> *tmp = head;
   while (head != NULL) {
     if (tmp->getData()->getKey() == key) {
@@ -173,6 +182,7 @@ bool SortedList<Key, Value>::doesKeyExist(Key key) {
 
 template <typename Key, typename Value>
 bool SortedList<Key, Value>::doesValueExist(Value value) {
+  //check if a specified value exists in the list
   Node<Key, Value> *tmp = head;
   while (head != NULL) {
     if (tmp->getData()->getValue() == value) {
@@ -185,6 +195,7 @@ bool SortedList<Key, Value>::doesValueExist(Value value) {
 
 template <typename Key, typename Value>
 Node<Key, Value>* SortedList<Key, Value>::findFirstNode(Value value){
+  // finds the first node that contains the specified value
   Node<Key, Value> *node = head;
   while(node != NULL){
     if(node->getData()->getValue() == value){
@@ -194,7 +205,5 @@ Node<Key, Value>* SortedList<Key, Value>::findFirstNode(Value value){
   }
   return node;
 }
-
-
 
 #endif //DSAPROJECT_LINKEDLIST_H
