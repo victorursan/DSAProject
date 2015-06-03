@@ -14,10 +14,11 @@ Console::~Console() {
 
 void Console::run() {
   string word;
-  cout<<"string: "<<endl;
+  cout<<"Word: "<<endl;
   cin>>word;
   DynamicVector<string> elements = ctrl->anagramsForWord(word);
+  cout<<endl<<"Anagram words:"<<endl;
   for (int i = 0; i < elements.getSize(); i++) {
-    cout<<elements.elementAtIndex(i)<<endl;
+    cout<<i<<"."<<elements.elementAtIndex(i)<<endl;
   }
 }

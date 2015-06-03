@@ -20,14 +20,13 @@ DynamicVector<string> SecondAnagramController::anagramsForWord(string word) {
   DynamicVector<string> keys = map->getKeys();
   for (int i = 0; i < keys.getSize(); i++) {
     if (map->valueForKey(keys.elementAtIndex(i)) == sortWord(word)) {
-      elements.add(map->valueForKey(keys.elementAtIndex(i)));
+      elements.add(keys.elementAtIndex(i));
     }
   }
   return elements;
 }
 
 string SecondAnagramController::sortWord(string word){
-  string smth = word;
-  sort(smth.begin(), smth.end());
-  return smth;
+  sort(word.begin(), word.end());
+  return word;
 }

@@ -18,7 +18,7 @@
 using namespace std;
 
 class SecondAnagramController : public Anagram {
-  Map<string, string> *map = new MapDVector<string, string>();
+  Map<string, string> *map = new MapHash<string, string>();
   AbstractRepository<string> *repo;
 
 public:
